@@ -1,0 +1,68 @@
+semana = 3
+if semana == 1:
+ print("Domingo")
+elif semana == 2:
+ print("Segunda-feira")
+elif semana == 3:
+ print("Terça-feira")
+elif semana == 4:
+ print("Quarta-feira")
+elif semana == 5:
+ print("Quinta-feira")
+elif semana == 6:
+ print("Sexta-feira")
+elif semana == 7:
+ print("Sábado")
+else: # O 'else' funciona como o 'default'
+ print("Dia inválido")
+
+mes = 6
+match mes:
+    case 1:
+        print("Janeiro")
+    case 2:
+        print("Fevereiro")
+    case 3:
+        print("Março")
+    case 6:
+        print("Junho")
+    case _ :
+        print("Mês inválido")
+
+'''Atividade Assistida
+Vamos desenvolver o programa dos meses do ano juntos:
+● Objetivo: Peça ao usuário para digitar um número entre 1 e 12 e imprima o nome do mês.
+● Entrada de Dados: Use int(input("Digite um número de 1 a 12: "))
+● Implementação (Exemplo com Match/Case):'''
+
+try:
+    numero_mes=int(input('Digite um número de 1 a 12'))
+    match numero_mes: 
+        case 1:
+            print("Janeiro")
+        case 2:
+            print("Fevereiro")
+        case 3:
+            print("Março")
+        case 4:
+            print("Abril")
+        case 5:
+            print("Maio")
+        case 6:
+            print("Junho")
+        case 7:
+            print("Julho")
+        case 8:
+            print("Agosto")
+        case 9:
+            print("Setembro")
+        case 10:
+            print("Outubro")
+        case 11:
+            print("Novembro")
+        case 12:
+            print("Dezembro")
+        case _ :
+            print(f"Número {numero_mes} invalido. Digite um número entre 1 e 12")
+except ValueError:
+    print("Entrada inválida. Por favor, digite um número inteiro")
