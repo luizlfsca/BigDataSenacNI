@@ -148,7 +148,7 @@ match codigoorigem:
         print("Oeste")
     case 5 | 6:
         print("Nordeste")
-    case 7| 8| "9":
+    case 7| 8| 9:
         print("Sudeste")
     case 10:
         print("Centro-Oeste")
@@ -156,3 +156,43 @@ match codigoorigem:
         print("Noroeste")
     case _ :
         print("Importado")
+'''5. Média do Aluno com Optativa:
+Escreva um programa que leia as notas das duas avaliações normais e a nota da avaliação
+optativa dos estudantes de uma turma. Caso o estudante não tenha feito a optativa, deve
+ser fornecido o valor -1. Calcular a média do semestre considerando que a prova optativa
+substitui a nota mais baixa entre as duas primeiras avaliações. Escrever a média e
+mensagens que indiquem se o estudante foi aprovado, reprovado ou se está em
+recuperação, de acordo com as informações abaixo:
+Aprovado: média >= 6.0
+Reprovado: média < 3.0
+Recuperação: média >= 3.0 e < 6.0
+'''
+nota1=float(input("Informe a nota da primeira avaliação:"))
+nota2=float(input("Informe a nota da segunda avaliação:"))
+notaoptativa=float(input("Informe a nota da avaliação optativa:"))
+if notaoptativa>nota1 or notaoptativa>nota2:
+    if nota1>nota2:
+        media=(nota1+notaoptativa)/2
+    else:
+        media=(nota2+notaoptativa)/2
+else:
+    media=(nota1+nota2)/2
+
+if media>=6:
+    print(f"Média {media}, Aprovado")
+elif media<3:
+    print(f"Média {media}, Reprovado")
+else:
+    print(f"Média {media}, Recuperação")
+
+'''6. Positivo ou Negativo:
+Escreva um programa para ler um valor e escrever se é positivo ou negativo. Considere o
+valor zero como positivo.'''
+
+valor=float(input("Insira um número"))
+if valor>0 :
+    print("O valor é positivo")
+elif valor<0 :
+    print("O valor é negativo")
+else:
+    print("o valor é nulo:")
