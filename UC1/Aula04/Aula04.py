@@ -81,14 +81,15 @@ area=largura*cumprimento
 potencia_necessaria=area * 3
 num_lampadas=potencia_necessaria/potenciaLampada
 bocais=area/3
+if num_lampadas % 1 > 0:
+    num_lampadas=int(lampadasInstaladas)+1
+else:
+    num_lampadas=int(lampadasInstaladas)
 if num_lampadas <= bocais:
     lampadasInstaladas=num_lampadas
 else:
     lampadasInstaladas=bocais
-if lampadasInstaladas % 1 > 0:
-    lampadasInstaladas=int(lampadasInstaladas)+1
-else:
-    lampadasInstaladas=int(lampadasInstaladas)
+
 print(f"Número de lâmpadas necessárias: {lampadasInstaladas}")
 
 '''2. Quantidade de Caixas de Azulejos:
@@ -101,7 +102,7 @@ larguracozinha=float(input("Digite a largura da cozinha (m):"))
 comprimentocozinha=float(input("Digite o comprimento da cozinha (m):"))
 alturacozinha=float(input("Digite a autura da cozinha (m):"))
 Metrosquadradoscozinha=((2*larguracozinha*alturacozinha)+(2*comprimentocozinha*alturacozinha))
-caixas=Metrosquadradoscozinha/1.4
+caixas=Metrosquadradoscozinha/1.5
 if caixas % 1 > 0:
     caixas=int(caixas+1)
 else:
@@ -189,10 +190,12 @@ else:
 Escreva um programa para ler um valor e escrever se é positivo ou negativo. Considere o
 valor zero como positivo.'''
 
-valor=float(input("Insira um número"))
-if valor>0 :
-    print("O valor é positivo")
-elif valor<0 :
-    print("O valor é negativo")
-else:
-    print("o valor é nulo:")
+try:
+
+    valor=float(input("Insira um número"))
+    if valor>=0 :
+        print("O valor é positivo")
+    else :
+        print("O valor é negativo")
+except ValueError:
+    print("Erro: Digite apenas números válidos")
