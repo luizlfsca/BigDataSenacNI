@@ -223,4 +223,8 @@ def menu_principal():
 # ==============================
 
 # chama o menu principal para começar
+<<<<<<< HEAD
 menu_principal()
+=======
+menu_principal()
+>>>>>>> a45a733 (Inclusão do Projeto)
