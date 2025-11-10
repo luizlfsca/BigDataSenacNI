@@ -1,0 +1,2 @@
+Na aula foi introduzido o conceito de variáveis, e operações aritiméticas
+Foram criados dois programas simples: Uma calculadora de média e uma calculadora que realiza todas as operações basicas
