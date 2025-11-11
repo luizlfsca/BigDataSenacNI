@@ -92,6 +92,9 @@ IDADE_MINIMA = 18 #define a idade de corte
 
 print('===Cadastro de Candidatos===')
 
+
+
+
 for i in range(1, TOTAL_CANDIDATOS + 1): #a cada loop numa amostra de 1 até a quantidade de candidatos + 1 (nesse exemplo ficaria 13) isso traria um range(1,13), definindo o total de tentativas.
     print(f'\n Candidato {i} de {TOTAL_CANDIDATOS}.')  #Imprime na tela uma especie de contador, {i} apresenta a sequancia atual do loop.
     while True: #Quer dizer que ele vai repetir o código enquanto a condição for verdadeira
@@ -121,8 +124,7 @@ for i in range(1, TOTAL_CANDIDATOS + 1): #a cada loop numa amostra de 1 até a q
         'nome': nome,
         'idade': idade,
         'telefone': telefone,
-        'email': email
-    })
+        'email': email})
 
     print(f'Usuário {nome}, tem {idade} anos: pode prosseguir!')
 
